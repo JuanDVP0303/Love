@@ -1,0 +1,359 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Lilita One', cursive;
+	letter-spacing: 1px;
+}
+
+html{
+	overflow: hidden;
+}
+
+
+main{
+background: #642B73;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #C6426E, #642B73);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #C6426E, #642B73); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+	}
+
+
+.primera-pantalla{
+
+	position: absolute;
+	height: 100vh;
+	align-items: center;
+	transition: all 0.5s ease-in-out;
+	opacity: 1;
+}
+
+
+.primera-pantalla-faded{
+	opacity: 0;
+	transform: translate(-500px);
+}
+
+.boton{
+	border-radius: 50%;
+	border: 2px solid white;
+	color: white;
+	display: flex;
+    justify-content: center;
+    align-items: center;
+	background: none;
+	width: 50px;
+	height: 50px;
+	transform: translate(1080px, 280px);
+	position: absolute;
+	top: 0;
+}
+
+.boton:hover{
+	cursor: pointer;
+}
+
+
+h1{
+	color: white;
+	position: absolute;
+	font-size: 32px;
+	top: calc(50% - 50px);
+	left: 350px;
+
+	width: 500px;
+}
+
+
+
+
+/*Segunda pantalla*/
+
+
+
+.container-mas-arrecho{
+	transition: all 1s ease;
+	opacity: 0;
+	transform: translate(1520px);
+
+
+}
+
+.container-mas-arrecho-faded{
+	opacity: 1;
+	transform: translate(0);
+
+
+}
+
+.container-mas-arrecho-desfaded{
+	transform: translate(-1520px);
+
+}
+
+
+.container-main{
+	width: 100%;
+	height: 100vh;
+	display: grid;
+	grid-auto-columns: auto;
+	grid-auto-rows: 80px;
+	justify-content: center;
+	align-content: center;
+	grid-auto-flow: column;
+	gap: 30px;
+}
+
+.container-grande{
+
+	background-image: url("https://i.imgur.com/skMEFbj.jpg");
+	background-size: cover;
+	background-repeat:no-repeat;
+	background-position: center;
+
+	grid-area: 1/1/5/2;
+	border-radius: 80px;
+	width: 368px;
+	height: 365px;	
+/*	overflow: hidden;*/
+}
+
+#cinco{
+	background-position: center;
+	background-repeat: no-repeat;
+	width: 100%;
+	height: 100%;	
+	border-radius: 20px;
+	background-size: cover;
+}
+
+
+
+.container-cards{
+	height: auto;
+	background: red;
+	display: grid;
+}
+
+.cards{
+	position: relative;
+	z-index: 2;
+	border-radius: 20px;
+	cursor: pointer;
+	width: 100px ;
+	height: 100px;
+	background: green;
+	justify-self: start;
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+/*	transition: all 0.2s ease-in-out;*/
+}
+
+.cards:hover{
+	height: 105px;
+-webkit-box-shadow: 0px 4px 20px -3px rgba(0,0,0,0.55);
+-moz-box-shadow: 0px 4px 20px -3px rgba(0,0,0,0.55);
+box-shadow: 0px 4px 20px -3px rgba(0,0,0,0.55);
+
+}
+
+
+
+.uno-move{
+	transition: transform 0.5s ease;
+	transform: scale(3.7) translate(-71px, 36px);
+
+}
+
+.dos-move{
+	transition: transform 0.5s ease;
+	transform: scale(3.7) translate(-71px, 6px);
+
+}
+
+
+.tres-move{
+	transition: transform 0.5s ease;
+	transform: scale(3.7) translate(-71px, -24px);
+
+}
+.cuatro-move{
+	transition: transform 0.5s ease;
+	transform: scale(3.7) translate(-71px, -53px);
+
+}
+
+.titulo-contenedor{
+	text-align: center;
+	width: 321px;
+	position: absolute;
+	left: 435px;
+	top: 5px;
+}
+
+.titulo, .titulo2{
+	font-size: 30px;
+	color: white;
+	text-align: center;
+}
+
+.titulo::after, .titulo::before{
+	content: "";
+	position: relative;
+	background-size: contain;
+	margin: 0 auto;
+	background-image: url("https://cdn.shopify.com/s/files/1/1061/1924/products/Growing_Pink_Heart_Emoji_grande.png?v=1571606066");
+	display: flex;
+	width: 30px;
+	height: 30px;
+	z-index: 3;
+	
+animation: palpito 0.8s ease infinite;
+
+}
+
+@keyframes palpito{
+			0%{
+				transform: scale(1);	
+			}
+			25%{
+				transform: scale(1.5);	
+				
+			}
+			100%{
+				transform: scale(1);	
+
+			}
+		}
+
+
+.titulo-contenedor2{
+	text-align: center;
+	width: 320px;
+	position: absolute;
+	left: 435px;
+	top: 540px;
+}
+
+.titulo2{
+	content: ":";
+	animation: parpadeo 1s ease infinite;
+}
+
+@keyframes parpadeo{
+	0%{
+		transform: scale(1.0);
+	}
+	5%{
+		transform: scale(1.2);
+	}
+	10%{
+		transform: scale(1.0);
+	}
+}
+
+.tercera-pantalla{
+	color: white;
+	text-align: center;
+	transform: translate(1520px);
+	position: absolute;
+	top: calc(50% - 100px);
+	left: calc(300px);
+transition: transform 1s ease;
+transition: opacity 3.5s ease;
+
+opacity: 0;
+
+}
+.tercera-pantalla h2{
+	padding: 5px;
+	letter-spacing: 2px;
+}
+
+
+.uno, .dos,.tres, .cuatro{
+	opacity: 0;
+}
+
+.uno{
+	transition: all 1s ease;
+	transform: translate(0, -200px);
+}
+
+.dos{
+	transition: all 1s ease;
+	transform: translate(-550px, 0);
+
+}
+
+.tres{
+	transition: all 1s ease;
+	transform: translate(700px, 0);
+
+}
+
+.cuatro{
+	transition: all 1s ease;
+	transform: translate(0, 200px);
+}
+
+.seis{
+	transition: all 3s ease;
+
+	transform: translate(0, -150px);
+
+}
+
+.cinco{
+	background-size: contain;
+	background-image: url("https://cdn.shopify.com/s/files/1/1061/1924/products/Growing_Pink_Heart_Emoji_grande.png?v=1571606066");
+	display: flex;
+	width: 50px;
+	height: 50px;	
+	margin: 0;
+/*	bottom: 100px;
+	left: 330px;
+	position: relative;*/
+	transition: all 2s ease;
+	animation: palpito 1.5s ease infinite;
+	animation-fill-mode: backwards;
+}
+
+.corazon-container{
+	transition: all 2s ease;
+
+	width: 70px;
+	height: 70px;
+	bottom: 100px;
+    left: 330px;
+    position: relative;
+}
+
+.corazon-container:hover{
+	cursor: pointer;
+
+}
+
+
+.none{
+	bottom: 300px;
+	left: 330px;
+	position: relative;
+	opacity: 0;
+	pointer-events: none;
+}
+
+.boton-tercero{
+	width: 110px;
+	height: 35px;
+	border-radius: 20px;
+	background: none;
+	border:3px solid white;
+	color: white;
+	left: 320px;
+	bottom: -120px;
+	cursor: pointer;
+	position: absolute;
+	transition: opacity 1s ease;
+}
